@@ -8,6 +8,6 @@ class AddSpec extends Specification{
 		when: "Initializing a class"
 		def add=new Add();
 		then: "result of numbers "
-		add.addTwoNumber(3,5) == 7
+		add.addTwoNumber(3,5) == 8
 	}
 }
