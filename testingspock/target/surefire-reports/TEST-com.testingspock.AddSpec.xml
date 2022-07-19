@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.testingspock.AddSpec" time="0.105" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.testingspock.AddSpec" time="0.811" tests="7" errors="0" skipped="0" failures="1">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\java\jdk1.8.0_161\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\R2v\AppData\Local\Temp\surefire4969870924886113026\surefirebooter7770353966426151960.jar C:\Users\R2v\AppData\Local\Temp\surefire4969870924886113026 2022-07-18T14-45-11_225-jvmRun1 surefire2882852301819305811tmp surefire_07871178073284403083tmp"/>
+    <property name="sun.java.command" value="C:\Users\R2v\AppData\Local\Temp\surefire5444169373780426742\surefirebooter6152820310138880801.jar C:\Users\R2v\AppData\Local\Temp\surefire5444169373780426742 2022-07-19T11-05-20_829-jvmRun1 surefire1548468590108375728tmp surefire_05958391979397643348tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\R2v\git\repository82\testingspock\target\test-classes;C:\Users\R2v\git\repository82\testingspock\target\classes;C:\Users\R2v\.m2\repository\org\spockframework\spock-core\2.1-groovy-3.0\spock-core-2.1-groovy-3.0.jar;C:\Users\R2v\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\R2v\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\R2v\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\R2v\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\R2v\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\R2v\.m2\repository\org\spockframework\spock-junit4\2.1-groovy-3.0\spock-junit4-2.1-groovy-3.0.jar;C:\Users\R2v\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\R2v\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\R2v\.m2\repository\net\bytebuddy\byte-buddy\1.12.7\byte-buddy-1.12.7.jar;C:\Users\R2v\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\R2v\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\R2v\.m2\repository\com\h2database\h2\2.1.210\h2-2.1.210.jar;C:\Users\R2v\.m2\repository\org\codehaus\groovy\groovy-sql\3.0.9\groovy-sql-3.0.9.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\R2v"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\R2v\AppData\Local\Temp\surefire4969870924886113026\surefirebooter7770353966426151960.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\R2v\AppData\Local\Temp\surefire5444169373780426742\surefirebooter6152820310138880801.jar"/>
     <property name="sun.boot.class.path" value="C:\java\jdk1.8.0_161\jre\lib\resources.jar;C:\java\jdk1.8.0_161\jre\lib\rt.jar;C:\java\jdk1.8.0_161\jre\lib\sunrsasign.jar;C:\java\jdk1.8.0_161\jre\lib\jsse.jar;C:\java\jdk1.8.0_161\jre\lib\jce.jar;C:\java\jdk1.8.0_161\jre\lib\charsets.jar;C:\java\jdk1.8.0_161\jre\lib\jfr.jar;C:\java\jdk1.8.0_161\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,5 +60,56 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="Add Two Number" classname="com.testingspock.AddSpec" time="0.093"/>
+  <testcase name="Add Two Number" classname="com.testingspock.AddSpec" time="0.099">
+    <system-out><![CDATA[setup before class
+inside constructor
+cleanup
+]]></system-out>
+  </testcase>
+  <testcase name="sustract Two Number" classname="com.testingspock.AddSpec" time="0.004">
+    <system-out><![CDATA[inside constructor
+cleanup
+]]></system-out>
+  </testcase>
+  <testcase name="multiply Two Number" classname="com.testingspock.AddSpec" time="0.006">
+    <system-out><![CDATA[inside constructor
+cleanup
+]]></system-out>
+  </testcase>
+  <testcase name="divide Two Number" classname="com.testingspock.AddSpec" time="0.008">
+    <system-out><![CDATA[inside constructor
+cleanup
+]]></system-out>
+  </testcase>
+  <testcase name="comparing strings" classname="com.testingspock.AddSpec" time="0.049">
+    <system-out><![CDATA[inside constructor
+cleanup
+]]></system-out>
+  </testcase>
+  <testcase name="arraylist" classname="com.testingspock.AddSpec" time="0.032">
+    <system-out><![CDATA[inside constructor
+cleanup
+]]></system-out>
+  </testcase>
+  <testcase name="exception handling" classname="com.testingspock.AddSpec" time="0.449">
+    <failure type="org.spockframework.runtime.SpockComparisonFailure"><![CDATA[org.spockframework.runtime.SpockComparisonFailure: 
+Condition not satisfied:
+
+e.message=="this method is exception"
+| |      |
+| |      false
+| |      7 differences (77% similarity)
+| |      this method is (having )exception
+| |      this method is (-------)exception
+| this method is having exception
+java.lang.RuntimeException: this method is having exception
+	at com.testingspock.Add.myMethod(Add.java:17)
+	at com.testingspock.AddSpec.$spock_feature_0_6(AddSpec.groovy:75)
+
+	at com.testingspock.AddSpec.exception handling(AddSpec.groovy:78)
+]]></failure>
+    <system-out><![CDATA[inside constructor
+cleanup
+]]></system-out>
+  </testcase>
 </testsuite>
