@@ -10,6 +10,6 @@ class LengthStringSpec extends Specification{
 		name	|	length
 		"Rajesh"|	6
 		"Abhinav"|	7
-		"Bhaskar"|	77
+		"Bhaskar"|	7
 	}
 }

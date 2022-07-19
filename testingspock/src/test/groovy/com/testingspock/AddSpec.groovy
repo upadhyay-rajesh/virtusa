@@ -75,7 +75,20 @@ class AddSpec extends Specification{
 			add.myMethod()
 		then:
 			def e=thrown(RuntimeException)
-			e.message=="this method is exception"
+			e.message=="this method is having exception"
+	}
+	
+	@Unroll
+	def "data driven"(){
+		when:
+			result=add.addTwoNumber(input1,input2)
+		then: "result of numbers "
+			result == expectedResult
+		where:
+			input1	|input2	|expectedResult
+			10		|20		|30
+			20		|40		|60
+			70		|45		|118
 	}
 }
 
