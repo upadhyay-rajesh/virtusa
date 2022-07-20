@@ -1,19 +1,75 @@
 package com.testingspock
 
+import groovy.sql.Sql
 import spock.lang.*
+
+
+class Publisher{
+	def subscribers=[]
+	
+	def send(event) {
+		subscribers.each{
+			try {
+				it.receive(event)
+			}
+			catch(Exception e) {
+				e.printStackTrace()
+			}
+		}
+	}
+}
+
+interface Subscriber{
+	def receive(event)
+}
+
 
 class AddSpec extends Specification{
 	
-	def setupSpec() {
-		println("setup before class")
+	def pub=new Publisher()
+	def sub1=Mock(Subscriber);
+	def sub2=Mock(Subscriber);
+	
+	def setup() {
+		pub.subscribers <<sub1 <<sub2
 	}
+	
+	def "deliver to all subscriber"(){
+		when:
+			pub.send("event")
+		then:
+			1*sub1.receive("event")
+			1*sub2.receive("event")
+	}
+	
+	
+	
+	
+	@Shared sql=Sql.newInstance("jdbc:mysql://localhost:3306/virtusa","root","rajesh","com.mysql.jdbc.Driver");
+	
+	
+	def setupSpec() {
+		sql.execute("create table employee(id int primary key, name varchar(23),email varchar(23),age int(12),empVisit int(12))");
+		sql.execute("insert into employee values(1,'Rajesh','abc@yahoo.com',43,12)");
+		sql.execute("insert into employee values(2,'Bhasker','abc1@yahoo.com',23,2)");
+		sql.execute("insert into employee values(3,'Dhiman','abc2@yahoo.com',23,127)");
+		sql.execute("insert into employee values(4,'Harsh','abc3@yahoo.com',23,124)");
+	}
+	
+	
+	def "employee name"(){
+		expect:
+			b==23
+		where:
+			[a,b,c] << sql.rows("select name,age,empVisit from employee")
+	}
+	
+	
 	def cleanupSpec() {
 		println("teardown after class")
 	}
 	
-	def setup() {
-		println("inside constructor")
-	}
+	
 	def cleanup() {
 		println("cleanup")
 	}
@@ -90,6 +146,11 @@ class AddSpec extends Specification{
 			20		|40		|60
 			70		|45		|118
 	}
+	
+	
+	
+	
+	
 }
 
 
